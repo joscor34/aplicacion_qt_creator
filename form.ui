@@ -46,7 +46,7 @@
      <string>Cerrar sesión</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="label_nombre">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -61,6 +61,42 @@
     <property name="text">
      <string>Bienvenido: Nombre</string>
     </property>
+   </widget>
+   <widget class="QPushButton" name="agregar_tarea">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>150</y>
+      <width>121</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Agregar tarea</string>
+    </property>
+   </widget>
+   <widget class="QScrollArea" name="scroll_tareas">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>200</y>
+      <width>581</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="widgetResizable">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>579</width>
+       <height>169</height>
+      </rect>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

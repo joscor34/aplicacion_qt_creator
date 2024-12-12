@@ -56,6 +56,9 @@ class Ui_LoginWindow(object):
         self.error.setObjectName(u"error")
         self.error.setGeometry(QRect(280, 400, 221, 20))
         self.error.setStyleSheet(u"color: rgb(255, 0, 0)")
+        self.cargando = QLabel(self.centralwidget)
+        self.cargando.setObjectName(u"cargando")
+        self.cargando.setGeometry(QRect(350, 390, 50, 50))
         LoginWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(LoginWindow)
         self.menubar.setObjectName(u"menubar")
@@ -79,5 +82,6 @@ class Ui_LoginWindow(object):
         self.label_4.setText(QCoreApplication.translate("LoginWindow", u"\u00bfNo tienes cuenta?", None))
         self.registro.setText(QCoreApplication.translate("LoginWindow", u"Crea una ahora", None))
         self.error.setText("")
+        self.cargando.setText("")
     # retranslateUi
 

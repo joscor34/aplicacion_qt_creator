@@ -16,7 +16,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QLabel, QMainWindow, QMenuBar,
-    QPushButton, QSizePolicy, QStatusBar, QWidget)
+    QPushButton, QScrollArea, QSizePolicy, QStatusBar,
+    QWidget)
 
 class Ui_Pagina_principal(object):
     def setupUi(self, Pagina_principal):
@@ -33,10 +34,21 @@ class Ui_Pagina_principal(object):
         self.cerrar_sesion = QPushButton(self.centralwidget)
         self.cerrar_sesion.setObjectName(u"cerrar_sesion")
         self.cerrar_sesion.setGeometry(QRect(470, 400, 131, 31))
-        self.label_2 = QLabel(self.centralwidget)
-        self.label_2.setObjectName(u"label_2")
-        self.label_2.setGeometry(QRect(20, 100, 331, 20))
-        self.label_2.setStyleSheet(u"font: 12pt \"Segoe UI\";")
+        self.label_nombre = QLabel(self.centralwidget)
+        self.label_nombre.setObjectName(u"label_nombre")
+        self.label_nombre.setGeometry(QRect(20, 100, 331, 20))
+        self.label_nombre.setStyleSheet(u"font: 12pt \"Segoe UI\";")
+        self.agregar_tarea = QPushButton(self.centralwidget)
+        self.agregar_tarea.setObjectName(u"agregar_tarea")
+        self.agregar_tarea.setGeometry(QRect(20, 150, 121, 29))
+        self.scroll_tareas = QScrollArea(self.centralwidget)
+        self.scroll_tareas.setObjectName(u"scroll_tareas")
+        self.scroll_tareas.setGeometry(QRect(20, 200, 581, 171))
+        self.scroll_tareas.setWidgetResizable(True)
+        self.scrollAreaWidgetContents = QWidget()
+        self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 579, 169))
+        self.scroll_tareas.setWidget(self.scrollAreaWidgetContents)
         Pagina_principal.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(Pagina_principal)
         self.menubar.setObjectName(u"menubar")
@@ -55,6 +67,7 @@ class Ui_Pagina_principal(object):
         Pagina_principal.setWindowTitle(QCoreApplication.translate("Pagina_principal", u"Pagina_principal", None))
         self.label.setText(QCoreApplication.translate("Pagina_principal", u"Principal", None))
         self.cerrar_sesion.setText(QCoreApplication.translate("Pagina_principal", u"Cerrar sesi\u00f3n", None))
-        self.label_2.setText(QCoreApplication.translate("Pagina_principal", u"Bienvenido: Nombre", None))
+        self.label_nombre.setText(QCoreApplication.translate("Pagina_principal", u"Bienvenido: Nombre", None))
+        self.agregar_tarea.setText(QCoreApplication.translate("Pagina_principal", u"Agregar tarea", None))
     # retranslateUi
 

@@ -70,15 +70,19 @@ class PaginaRegistro(QMainWindow):
             self.ui.error.setText('Error: Contraseñas no coinciden')
 
         else:
-            print('Todos los datos soncorrectos :D')
+            print('Todos los datos son correctos :D')
             self.ui.error.setText('')
 
-            registrar_usuario(nombre, apellidos, telefono, correo, password_1)
+            resultado = registrar_usuario(nombre, apellidos, telefono, correo, password_1)
 
+            # Si se cumple, significa que tenemos un usuario previamente registrado
+            if 'Error' in resultado:
+                self.ui.error.setText('Este correo ya está asociado a otra cuenta.')
 
-            # Si toda su información es válida, la guardamos en la db y lo mandamos a login
-            # para que inicie sesión
-            self.mandar_login()
+            else:
+                # Si toda su información es válida, la guardamos en la db y lo mandamos a login
+                # para que inicie sesión
+                self.mandar_login()
 
 
 
